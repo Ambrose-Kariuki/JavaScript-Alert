@@ -2,14 +2,7 @@
 <html>
 <body>
 
-<h2>JavaScript Alert</h2>
-
-<button<!DOCTYPE html>
-<html>
-<body>
-
-<h2>JavaScript Confirm Box</h2>
-
+<h2>JavaScript Prompt</h2>
 
 <button onclick="myFunction()">Try it</button>
 
@@ -17,23 +10,14 @@
 
 <script>
 function myFunction() {
-  var txt;
-  if (confirm("Press a button!")) {
-    txt = "You pressed OK!";
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
   } else {
-    txt = "You pressed Cancel!";
+    text = "Hello " + person + "! How are you today?";
   }
-  document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
-</body>
-</html>
- onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  alert("I am an alert box!");
+  document.getElementById("demo").innerHTML = text;
 }
 </script>
 
